@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-textPrimary antialiased;
   }
@@ -25,7 +29,8 @@
 
 /* Custom animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -34,7 +39,8 @@
 }
 
 @keyframes glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(247, 106, 0, 0.3);
   }
   50% {
@@ -48,4 +54,64 @@
 
 .animate-glow {
   animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease;
+}
+
+/* Responsive urgenze card */
+@media (max-width: 768px) {
+  .urgenza-card {
+    min-height: 250px !important;
+  }
+}
+
+/* CTA Finale - hover bottoni e responsive br */
+.cta-button {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cta-button:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+.cta-button svg,
+.cta-button .store-icon {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cta-button:hover svg,
+.cta-button:hover .store-icon {
+  transform: scale(1.15);
+}
+.cta-button:active {
+  transform: scale(1.02) translateY(-1px);
+}
+
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+/* Nascondi <br> su mobile per a capo naturale */
+@media (max-width: 768px) {
+  .cta-finale h2 br,
+  .cta-finale p br {
+    display: none;
+  }
 }
