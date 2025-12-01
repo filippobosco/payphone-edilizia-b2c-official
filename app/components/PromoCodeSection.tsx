@@ -55,7 +55,7 @@ export default function PromoCodeSection() {
             transition={{
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: [0.42, 0, 0.58, 1],
             }}
             className="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-2xl mb-8"
           >

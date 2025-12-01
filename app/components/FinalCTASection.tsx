@@ -26,7 +26,7 @@ export default function FinalCTASection() {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear",
+            ease: [0, 0, 1, 1],
           }}
           className="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-lg transform rotate-12"
         />
@@ -38,7 +38,7 @@ export default function FinalCTASection() {
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: "linear",
+            ease: [0, 0, 1, 1],
           }}
           className="absolute bottom-20 right-20 w-48 h-48 border-4 border-white rounded-full"
         />
@@ -50,7 +50,7 @@ export default function FinalCTASection() {
           transition={{
             duration: 18,
             repeat: Infinity,
-            ease: "linear",
+            ease: [0, 0, 1, 1],
           }}
           className="absolute top-1/2 right-10 w-24 h-24 border-4 border-white rounded-lg transform -rotate-12"
         />
